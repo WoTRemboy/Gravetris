@@ -12,6 +12,27 @@ public class Piece : MonoBehaviour
     public float moveDelay = 0.1f;
     public float lockDelay = 0.5f;
 
+    private bool uiMoveLeftHeld;
+    private bool uiMoveRightHeld;
+
+    public void OnMoveLeftDown()  => uiMoveLeftHeld  = true;
+    public void OnMoveLeftUp()    => uiMoveLeftHeld  = false;
+    public void OnMoveRightDown() => uiMoveRightHeld = true;
+    public void OnMoveRightUp()   => uiMoveRightHeld = false;
+
+    public void OnRotateCW() {
+        board.Clear(this);
+        lockTime += Time.deltaTime;
+        Rotate(1);
+        board.Set(this);
+    }
+    public void OnHardDrop() {
+        board.Clear(this);
+        lockTime += Time.deltaTime;
+        HardDrop();
+        board.Set(this);
+    }
+
     private float stepTime;
     private float moveTime;
     private float lockTime;
@@ -74,19 +95,18 @@ public class Piece : MonoBehaviour
     {
         // Soft drop movement
         if (Input.GetKey(KeyCode.S))
-        {
-            if (Move(Vector2Int.down)) {
-                // Update the step time to prevent double movement
-                stepTime = Time.time + stepDelay;
-            }
-        }
+    {
+        if (Move(Vector2Int.down))
+            stepTime = Time.time + stepDelay;
+    }
 
-        // Left/right movement
-        if (Input.GetKey(KeyCode.A)) {
-            Move(Vector2Int.left);
-        } else if (Input.GetKey(KeyCode.D)) {
-            Move(Vector2Int.right);
-        }
+    bool moveLeft  = Input.GetKey(KeyCode.A) || uiMoveLeftHeld;
+    bool moveRight = Input.GetKey(KeyCode.D) || uiMoveRightHeld;
+
+    if (moveLeft)
+        Move(Vector2Int.left);
+    else if (moveRight)
+        Move(Vector2Int.right);
     }
 
     private void Step()

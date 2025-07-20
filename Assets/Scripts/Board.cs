@@ -11,6 +11,8 @@ public class Board : MonoBehaviour
     public Vector2Int boardSize = new Vector2Int(10, 20);
     public Vector3Int spawnPosition = new Vector3Int(-1, 8, 0);
 
+    [SerializeField] private GameObject gameOverPanel;
+
     public RectInt Bounds
     {
         get
@@ -32,6 +34,7 @@ public class Board : MonoBehaviour
 
     private void Start()
     {
+        gameOverPanel.SetActive(false);
         SpawnPiece();
     }
 
@@ -45,15 +48,21 @@ public class Board : MonoBehaviour
         if (IsValidPosition(activePiece, spawnPosition)) {
             Set(activePiece);
         } else {
-            GameOver();
+            ShowGameOver();
         }
+    }
+
+    public void ShowGameOver()
+    {
+        gameOverPanel.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void GameOver()
     {
+        gameOverPanel.SetActive(false);
         tilemap.ClearAllTiles();
-
-        // Do anything else you want on game over here..
+        Time.timeScale = 1f;
     }
 
     public void Set(Piece piece)

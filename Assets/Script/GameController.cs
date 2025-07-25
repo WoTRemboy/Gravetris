@@ -10,7 +10,6 @@ namespace Tomino
     {
         public GameConfig gameConfig;
         public AlertView alertView;
-        public SettingsView settingsView;
         public AudioPlayer audioPlayer;
         public GameObject screenButtons;
         public AudioSource musicAudioSource;
@@ -89,13 +88,7 @@ namespace Tomino
             alertView.SetTitle(TextID.GamePaused);
             alertView.AddButton(TextID.Resume, _game.Resume, audioPlayer.PlayResumeClip);
             alertView.AddButton(TextID.NewGame, _game.Start, audioPlayer.PlayNewGameClip);
-            alertView.AddButton(TextID.Settings, ShowSettingsView, audioPlayer.PlayResumeClip);
             alertView.Show();
-        }
-
-        private void ShowSettingsView()
-        {
-            settingsView.Show(ShowPauseView);
         }
 
         private void HandlePlayerSettings()

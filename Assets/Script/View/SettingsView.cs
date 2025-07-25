@@ -64,7 +64,7 @@ namespace Tomino.View
             gameObject.SetActive(true);
         }
 
-        private void Hide()
+        public void Hide()
         {
             gameObject.SetActive(false);
         }

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d74596528c54431aa91270c4c5658717, type: 3}
+  m_Name: Default1
+  m_EditorClassIdentifier: 
+  blockColor1: {r: 0.7254902, g: 0.039215688, b: 0.098039225, a: 1}
+  blockColor2: {r: 0.4156863, g: 0.10588236, b: 1, a: 1}
+  blockColor3: {r: 0.95294124, g: 0.41176474, b: 0, a: 1}
+  blockColor4: {r: 0.9058824, g: 0.6862745, b: 0, a: 1}
+  blockColor5: {r: 0, g: 0.81568635, b: 0.81568635, a: 1}
+  blockColor6: {r: 0, g: 0.52156866, b: 1, a: 1}
+  blockColor7: {r: 0.16862746, g: 0.7686275, b: 0.043137256, a: 1}
+  blockShadowColor: {r: 0.38431376, g: 0.38431376, b: 0.3921569, a: 1}
+  gameBackgroundColor: {r: 0.027450982, g: 0.078431375, b: 0.121568635, a: 1}
+  boardBackgroundColor: {r: 0.11764706, g: 0.15686275, b: 0.19607843, a: 1}
+  boardBorderColor: {r: 0.764151, g: 0.43271768, b: 0.13336597, a: 1}
+  panelBackgroundColor: {r: 0.078431375, g: 0.21568628, b: 0.3529412, a: 1}
+  panelBorderColor: {r: 0.7647059, g: 0.43529412, b: 0.13725491, a: 1}
+  panelLabelTextColor: {r: 1, g: 1, b: 1, a: 1}
+  panelScoreTextColor: {r: 0.5568628, g: 0.70980394, b: 0.9607843, a: 1}
+  panelLevelTextColor: {r: 0.5568628, g: 0.70980394, b: 0.9607844, a: 1}
+  menuBackgroundColor: {r: 0.078431375, g: 0.21568628, b: 0.3529412, a: 1}
+  menuBorderColor: {r: 0.7647059, g: 0.43529412, b: 0.13725491, a: 1}
+  menuTextColor: {r: 1, g: 1, b: 1, a: 1}
+  buttonBorderColor: {r: 1, g: 1, b: 1, a: 1}
+  buttonBackgroundColor: {r: 0.7647059, g: 0.43529412, b: 0.13725491, a: 1}
+  buttonIconColor: {r: 1, g: 1, b: 1, a: 1}
+  buttonTextColor: {r: 1, g: 1, b: 1, a: 1}
+  toggleBorderColor: {r: 1, g: 1, b: 1, a: 1}
+  toggleBorderColorSelected: {r: 1, g: 1, b: 1, a: 1}
+  toggleIconColor: {r: 1, g: 1, b: 1, a: 1}
+  toggleIconColorSelected: {r: 1, g: 1, b: 1, a: 1}
+  toggleBackgroundColor: {r: 0, g: 0, b: 0, a: 0}
+  toggleBackgroundColorSelected: {r: 0.7647059, g: 0.43529412, b: 0.13725491, a: 1}
+  toggleTextColor: {r: 1, g: 1, b: 1, a: 1}
+  toggleTextColorSelected: {r: 1, g: 1, b: 1, a: 1}
+  screenButtonColor: {r: 0.7647059, g: 0.43529412, b: 0.13725491, a: 1}
+  screenButtonBorderColor: {r: 1, g: 1, b: 1, a: 1}
